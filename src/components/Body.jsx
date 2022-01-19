@@ -16,10 +16,11 @@ export default function Body() {
 
     async function fetchImage() {
       const response = await fetch(
-        `${apiendpoint}/planetary/apod?api_key=${apikey}&start_date=2021-12-31&end_date=2022-01-09`
+        `${apiendpoint}/planetary/apod?api_key=${apikey}&start_date=2021-12-29&end_date=2022-01-9`
       );
       const data = await response.json();
       setImage(data);
+      console.log(data);
     }
   }, []);
 
@@ -32,7 +33,7 @@ export default function Body() {
 
   return (
     <>
-      <h1>Spacestagram</h1>
+      <div className="title">Spacestagram</div>
       <div className="grid-container">
         {image.map((item, index) => {
           return (

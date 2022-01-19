@@ -22,13 +22,15 @@ export default function Card({ id, url, title, desc, currentData }) {
 
   return (
     <div className="card-wrapper">
-      <img src={url} alt={title} className="card-img" />
+      <div className="card-img-wrapper">
+        <img src={url} alt={title} className="card-img" />
+      </div>
       <div className="card-title-wrapper">
-        <h1>{title}</h1>
+        <p class="card-title">{title}</p>
         <Like isLiked={isLiked} handleclick={handleOnClick} />
       </div>
-      <p> Date: {currentData}</p>
-      <p>{desc}</p>
+      <p className="date"> Date: {currentData}</p>
+      <p className="description">{desc}</p>
     </div>
   );
 }
