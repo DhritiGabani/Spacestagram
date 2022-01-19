@@ -10,7 +10,9 @@ export default function Body() {
 
   useEffect(() => {
     fetchImage();
-    console.log(localStorage);
+    if (!localStorage.getItem("likedCards")) {
+      localStorage.setItem("likedCards", JSON.stringify([]));
+    }
 
     async function fetchImage() {
       const response = await fetch(
