@@ -12,12 +12,14 @@ html {
   font-weight: 600;
   font-size: 3rem;
 }
+
 .date {
   font-weight: 500;
-  font-size: 1.4rem;
-}
-.description {
   font-size: 1.2rem;
+}
+
+.description {
+  font-size: 0.9rem;
 }
 
 .wrapper {
@@ -28,11 +30,11 @@ html {
 }
 
 .card-img-wrapper {
-  height: 20rem;
+  height: 16rem;
 }
 
 .card-wrapper {
-  max-width: 30rem;
+  max-width: 22rem;
   margin: 1rem;
   padding: 1rem;
   border-radius: 10px;
@@ -52,24 +54,16 @@ html {
 }
 
 .card-title {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-weight: bold;
   width: 85%;
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: masonry;
+  grid-template-columns: auto auto;
   padding: 2rem;
-  column-gap: 3rem;
-  row-gap: 3rem;
-}
-
-@media all and (max-width: 1024px) {
-  .grid-container {
-    grid-template-columns: auto auto;
-  }
+  gap: 3rem;
 }
 
 @media all and (max-width: 768px) {
